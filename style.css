@@ -63,3 +63,25 @@ input[type="text"] {
     padding: 10px;
   }
 }
+
+input {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+}
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid var(--accent-color);
+  background-color: #000;
+  color: var(--accent-color);
+  font-family: var(--font-main);
+}
+
+input::placeholder {
+  color: #888;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}

@@ -1,11 +1,15 @@
+/* === Base Styles === */
 body {
   background: black;
   color: #00ff00;
-  font-family: monospace;
+  font-family: 'Share Tech Mono', monospace;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .terminal {
@@ -13,14 +17,15 @@ body {
   padding: 5vw;
   width: 90vw;
   max-width: 600px;
-  text-align: center;
   background: #111;
+  text-align: center;
   font-size: 1.25rem;
   box-shadow: 0 0 20px #00ff00;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-
+/* === Button === */
 button {
   background: black;
   border: 1px solid #00ff00;
@@ -29,8 +34,36 @@ button {
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
 }
 
+button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+/* === Input === */
+input[type="text"] {
+  background: black;
+  border: 1px solid red;
+  color: red;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  appearance: none;
+}
+
+input::placeholder {
+  color: #888;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* === Flash Animation === */
 .output-flash {
   animation: flash 0.3s ease-in-out;
 }
@@ -39,49 +72,5 @@ button {
   0%   { background-color: #00ff00; color: black; }
   100% { background-color: transparent; color: #00ff00; }
 }
-input[type="text"] {
-  background: black;
-  border: 1px solid red;
-  color: red;
-  font-family: monospace;
-  font-size: 1.1rem;
-  padding: 10px;
-  margin-bottom: 15px;
-  width: 100%;
-  text-align: center;
-}
 
-@media (max-width: 400px) {
-  .terminal {
-    font-size: 1rem;
-    padding: 6vw;
-  }
-
-  input[type="text"],
-  button {
-    font-size: 1rem;
-    padding: 10px;
-  }
-}
-
-input {
-  width: 100%;
-  max-width: 100%;
-  padding: 1rem;
-  font-size: 1.25rem;
-  box-sizing: border-box;
-}
-input {
-  -webkit-appearance: none;
-  appearance: none;
-  border: 2px solid var(--accent-color);
-  background-color: #000;
-  color: var(--accent-color);
-  font-family: var(--font-main);
-}
-
-input::placeholder {
-  color: #888;
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
+/* === Mobi*

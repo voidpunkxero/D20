@@ -1,0 +1,65 @@
+body {
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.terminal {
+  border: 2px solid #00ff00;
+  padding: 5vw;
+  width: 90vw;
+  max-width: 600px;
+  text-align: center;
+  background: #111;
+  font-size: 1.25rem;
+  box-shadow: 0 0 20px #00ff00;
+  margin: 0 auto;
+}
+
+
+button {
+  background: black;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 12px 24px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.output-flash {
+  animation: flash 0.3s ease-in-out;
+}
+
+@keyframes flash {
+  0%   { background-color: #00ff00; color: black; }
+  100% { background-color: transparent; color: #00ff00; }
+}
+input[type="text"] {
+  background: black;
+  border: 1px solid red;
+  color: red;
+  font-family: monospace;
+  font-size: 1.1rem;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .terminal {
+    font-size: 1rem;
+    padding: 6vw;
+  }
+
+  input[type="text"],
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
